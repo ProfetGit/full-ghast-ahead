@@ -1,0 +1,11 @@
+tellraw @s ["",{text:"\nFull Ghast Ahead ",color:"gold",bold:true},{text:"v1.0.0",color:"dark_gray"}]
+data modify storage full_ghast_ahead:menu row set value []
+function full_ghast_ahead:settings/button with storage full_ghast_ahead:presets list[0]
+function full_ghast_ahead:settings/button with storage full_ghast_ahead:presets list[1]
+function full_ghast_ahead:settings/button with storage full_ghast_ahead:presets list[2]
+function full_ghast_ahead:settings/button with storage full_ghast_ahead:presets list[3]
+function full_ghast_ahead:settings/button with storage full_ghast_ahead:presets list[4]
+function full_ghast_ahead:settings/button with storage full_ghast_ahead:presets list[5]
+tellraw @s ["",{text:" Ridden speed: ",color:"gray",hover_event:{action:"show_text",value:"How fast a happy ghast flies while a player steers it. Up, down and sideways too. 1× is vanilla"}},{storage:"full_ghast_ahead:menu",nbt:"row[]",interpret:true,separator:" "}]
+tellraw @s ["",{text:" [Uninstall]",color:"dark_red",hover_event:{action:"show_text",value:"Return every boosted happy ghast to vanilla speed and remove the pack's data"},click_event:{action:"suggest_command",command:"/function full_ghast_ahead:uninstall"}}]
+data remove storage full_ghast_ahead:menu row

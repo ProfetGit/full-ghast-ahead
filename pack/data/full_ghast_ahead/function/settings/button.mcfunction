@@ -1,0 +1,2 @@
+$execute if data storage full_ghast_ahead:config {speed:$(speed)} run return run data modify storage full_ghast_ahead:menu row append value {text:"[$(label)]",color:"green",bold:true,hover_event:{action:"show_text",value:"Current: about $(bps) blocks/s"}}
+$data modify storage full_ghast_ahead:menu row append value {text:"[$(label)]",color:"aqua",hover_event:{action:"show_text",value:"About $(bps) blocks/s. Click to use"},click_event:{action:"run_command",command:"/function full_ghast_ahead:set {speed:$(speed)}"}}

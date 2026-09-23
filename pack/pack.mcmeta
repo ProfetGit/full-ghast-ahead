@@ -1,0 +1,11 @@
+{
+  "pack": {
+    "description": [
+      {"text": "Full Ghast Ahead", "color": "gold", "bold": true},
+      {"text": " – faster happy ghasts\n", "color": "gray"},
+      {"text": "v1.0.0 by Profet", "color": "dark_gray"}
+    ],
+    "min_format": [107, 1],
+    "max_format": 121
+  }
+}

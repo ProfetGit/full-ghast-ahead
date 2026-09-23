@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "ghastride.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": ["MinecraftMixin"],
+  "injectors": {"defaultRequire": 1}
+}

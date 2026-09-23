@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "ghastride",
+  "version": "0.1.0",
+  "name": "Happy ghast ride probe (dev only)",
+  "environment": "client",
+  "mixins": ["ghastride.mixins.json"],
+  "depends": {"fabricloader": "*"}
+}
