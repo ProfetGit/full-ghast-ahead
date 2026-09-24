@@ -1,97 +1,50 @@
 ![Full Ghast Ahead](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/banner.gif)
 
+<p align="center">
+<a href="https://github.com/ProfetGit"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/buttons/github.gif" alt="GitHub" width="23.96%"></a>
+<a href="https://ko-fi.com/profetgit"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/buttons/kofi.gif" alt="Ko-fi" width="23.96%"></a>
+</p>
+
 **Your happy ghast, twice as fast.**
 
-Full Ghast Ahead is a vanilla data pack for **Minecraft Java 26.2 and 26.3**. A happy ghast flies **2× faster** while you steer it: forward, sideways, up and down. Get off, and it floats along at its usual pace again.
+A vanilla data pack for **Minecraft Java 26.2 and 26.3**. A happy ghast flies **2× faster** while you steer it, and floats along at its usual pace again when you get off. It runs on the server only, and also comes as a mod (Fabric, Quilt, NeoForge, Forge) and a server plugin (Paper, Purpur, Spigot, Bukkit).
 
-## Why this pack?
+![Why this pack?](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-why-this-pack.png)
 
-**Vanilla happy ghasts are slow.** Steered, a happy ghast does about 3.6 blocks per second, slower than you sprint. With the pack it does about 7.2 by default, and up to 14.4 if you want.
+- **Vanilla happy ghasts are slow.** Steered, one does about 3.6 blocks per second, slower than you sprint. With the pack it does about 7.2, and up to 14.4 if you want.
+- **Only while you ride.** Happy ghasts that nobody rides behave exactly as in vanilla, and hostile ghasts are untouched.
+- **Still feels like vanilla.** The pack raises the ghast's own flying speed, so turning, climbing and slowing down feel the same, just faster.
 
-**Only while you ride.** The boost switches on when a player steers the ghast and off the moment they get off. Happy ghasts that nobody rides behave exactly as in vanilla.
-
-**Still feels like vanilla.** The pack raises the ghast's own flying speed, the value the game already uses for ridden flight. Accelerating, turning, climbing and slowing down keep their vanilla feel, just faster. Nothing is teleported or pushed around.
-
-**One zip, server-side only.** No mods, no resource pack, no client install and no experimental features. It works in singleplayer and on servers.
-
-**Tested, not hoped.** Every release is checked by 30 automated tests on real 26.2 and 26.3 servers. They cover getting on and off, ghasts without a harness, mobs in the saddle, hostile ghasts, the settings menu, `/reload` and uninstalling. The speed was also measured in the real game: 3.61 blocks per second in vanilla, 7.21 at 2× and 14.43 at 4×.
-
-## How to use
+![How to use](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-how-to-use.png)
 
 1. Put a harness on a happy ghast.
-2. Get on and fly. The player in the front seat steers, and gets the speed.
+2. Get on and fly. The player in the front seat steers and gets the speed.
 
-## Settings
+![Settings](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-settings.png)
 
-Server operators pick the speed from a clickable menu:
+Operators pick the speed with `/function full_ghast_ahead:settings`: 1×, 1.5×, **2×** (default), 2.5×, 3× or 4×. At 4× a ghast keeps up with the fastest horses.
 
-`/function full_ghast_ahead:settings`
+![Installation](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-installation.png)
 
-| Setting | Steered speed |
-|---|---|
-| 1× | about 3.6 blocks/s (vanilla) |
-| 1.5× | about 5.4 blocks/s |
-| **2×** (default) | about 7.2 blocks/s |
-| 2.5× | about 9.0 blocks/s |
-| 3× | about 10.8 blocks/s |
-| 4× | about 14.4 blocks/s |
+- **Data pack:** put the `.zip` in your world's `datapacks` folder and run `/reload`. Don't unzip it.
+- **Mod:** put the `-fabric.jar` (Fabric or Quilt, needs Fabric API) or the `-forge.jar` (Forge or NeoForge) in `mods`.
+- **Plugin:** put the `-plugin.jar` in `plugins` and restart the server.
 
-For comparison, sprinting is about 5.6 blocks/s and the fastest horses reach about 14. A new setting applies straight away, also to a ghast someone is already riding, and it survives `/reload` and restarts.
+Use only one of the three. To remove it cleanly, run `/function full_ghast_ahead:uninstall` first.
 
-## Commands
-
-| Command | What it does |
-|---|---|
-| `/function full_ghast_ahead:settings` | Opens the settings menu |
-| `/function full_ghast_ahead:uninstall` | Returns every boosted happy ghast to vanilla speed and removes the pack's data |
-
-## Installation
-
-**Singleplayer**
-- New world: under **More → Data Packs**, drag the `.zip` file into the window.
-- Existing world: put the `.zip` file in the world's `datapacks/` folder, then run `/reload` or reopen the world.
-
-**Server:** put the `.zip` file in `world/datapacks/`, then run `/reload` or restart the server.
-
-Don't unzip the file.
-
-**As a mod:** the same pack also comes as a mod for Fabric, Quilt, NeoForge and Forge. Put `FullGhastAhead-1.0.0-fabric.jar` (Fabric or Quilt, needs Fabric API) or `FullGhastAhead-1.0.0-forge.jar` (Forge or NeoForge) in the `mods` folder. It then runs in every world. Use either the mod or the zip, not both.
-
-**As a server plugin:** the same pack also comes as a plugin for Paper, Purpur, Spigot and Bukkit. Put `FullGhastAhead-1.0.0-plugin.jar` in the `plugins` folder and restart the server. On Paper and Purpur the plugin loads the pack itself; on Spigot and Bukkit it copies the pack into `world/datapacks/` and reloads. Use either the plugin or the zip, not both.
-
-## Compatibility
-
-- One zip supports Minecraft Java **26.2 and 26.3**.
-- Only happy ghasts are affected. Hostile ghasts are untouched.
-- Everything lives in the `full_ghast_ahead` namespace. It adds to the vanilla `#minecraft:load` and `#minecraft:tick` function tags and doesn't replace any files.
-- Other packs that change a happy ghast's flying speed keep working. This pack multiplies the ghast's base speed on top of them.
-
-## Good to know
-
-- The multiplier is on the whole flight, so climbing, sinking and sideways movement speed up too.
-- While a ghast is steered, it carries an attribute modifier named `full_ghast_ahead:boost`. It is removed when the rider gets off. If you remove the pack while a player is logged out mid-ride, that one ghast keeps the boost.
-
-## Uninstall
-
-1. Run `/function full_ghast_ahead:uninstall`.
-2. Remove `FullGhastAhead-1.0.0.zip` from the `datapacks` folder.
-3. Run `/reload`, or reopen the world or restart the server.
-
-Installed as a mod? Run step 1, then remove the jar from the `mods` folder and restart the game or server.
-
-Installed as a plugin? Run step 1, then remove the jar from the `plugins` folder. On Spigot and Bukkit, also delete `world/datapacks/full_ghast_ahead.zip`. Restart the server.
-
-## Support
+![Support](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-support.png)
 
 Full Ghast Ahead is free. If it saves you some time, a coffee helps fund the next update.
 
 [![Support me on Ko-fi](https://raw.githubusercontent.com/ProfetGit/assets/main/kofi-banner.gif)](https://ko-fi.com/profetgit)
 
-## License
+![License](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-license.png)
 
 © 2026 Profet. All rights reserved.
 
-- **You can** use Full Ghast Ahead on any server, including monetized ones, and include the unmodified zip in any modpack that credits Profet and links here. You can also feature it in videos and modify it for your own world or server.
-- **Please don't** re-upload Full Ghast Ahead or a modified version of it elsewhere, sell it, or present it as your own.
+- **You can** use Full Ghast Ahead on any server, including monetized ones, include it in modpacks that credit Profet and link here, feature it in videos and modify it for your own world or server.
+- **Please don't** re-upload it or a modified version, sell it, or present it as your own.
 
-The full terms are in the `LICENSE` file inside the zip. For anything else, just ask.
+Full terms: [LICENSE](https://github.com/ProfetGit/full-ghast-ahead/blob/main/LICENSE).
+
+![](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/divider.png)
