@@ -55,6 +55,8 @@ For comparison, sprinting is about 5.6 blocks/s and the fastest horses reach abo
 
 Don't unzip the file.
 
+**As a mod:** the same pack also comes as a mod for Fabric, Quilt, NeoForge and Forge. Put `FullGhastAhead-1.0.0-fabric.jar` (Fabric or Quilt, needs Fabric API) or `FullGhastAhead-1.0.0-forge.jar` (Forge or NeoForge) in the `mods` folder. It then runs in every world. Use either the mod or the zip, not both.
+
 ## Compatibility
 
 - One zip supports Minecraft Java **26.2 and 26.3**.
@@ -72,6 +74,8 @@ Don't unzip the file.
 1. Run `/function full_ghast_ahead:uninstall`.
 2. Remove `FullGhastAhead-1.0.0.zip` from the `datapacks` folder.
 3. Run `/reload`, or reopen the world or restart the server.
+
+Installed as a mod? Run step 1, then remove the jar from the `mods` folder and restart the game or server.
 
 ## Support
 
