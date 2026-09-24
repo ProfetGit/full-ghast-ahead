@@ -49,8 +49,7 @@ public class GhastTest {
     static final List<String> failures = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
-        net.minecraft.server.Main.main(new String[] {"--nogui"});
-        server = findServer();
+        server = boot();
         long deadline = System.currentTimeMillis() + 180_000;
         while (!server.isReady()) {
             if (System.currentTimeMillis() > deadline) throw new IllegalStateException("server never became ready");
@@ -75,6 +74,24 @@ public class GhastTest {
             Thread.sleep(3000);
             System.exit(failed == 0 ? 0 : 1);
         }
+    }
+
+    /** Vanilla by default; -Dharness.main=<class> boots a plugin platform in-process instead (PLATFORM= in run.sh). */
+    static MinecraftServer boot() throws Exception {
+        String main = System.getProperty("harness.main");
+        if (main == null) {
+            net.minecraft.server.Main.main(new String[] {"--nogui"});
+            return findServer();
+        }
+        Class.forName(main).getMethod("main", String[].class).invoke(null, (Object) new String[] {"--nogui"});
+        java.lang.reflect.Method get = MinecraftServer.class.getMethod("getServer");
+        long deadline = System.currentTimeMillis() + 180_000;
+        Object s;
+        while ((s = get.invoke(null)) == null) {
+            if (System.currentTimeMillis() > deadline) throw new IllegalStateException("server never started");
+            Thread.sleep(50);
+        }
+        return (MinecraftServer) s;
     }
 
     @SuppressWarnings("unchecked")
@@ -117,12 +134,14 @@ public class GhastTest {
     static List<String> cmd(String command) {
         return on(() -> {
             List<String> out = new ArrayList<>();
-            CommandSource capture = new CommandSource() {
-                public void sendSystemMessage(Component c) { out.add(c.getString()); }
-                public boolean acceptsSuccess() { return true; }
-                public boolean acceptsFailure() { return true; }
-                public boolean shouldInformAdmins() { return false; }
-            };
+            // a proxy, not an anonymous class: plugin platforms add methods (getBukkitSender), answered by the server
+            CommandSource capture = (CommandSource) java.lang.reflect.Proxy.newProxyInstance(CommandSource.class.getClassLoader(),
+                new Class<?>[] {CommandSource.class}, (proxy, m, a) -> switch (m.getName()) {
+                    case "sendSystemMessage" -> { out.add(((Component) a[0]).getString()); yield null; }
+                    case "acceptsSuccess", "acceptsFailure" -> true;
+                    case "shouldInformAdmins" -> false;
+                    default -> m.invoke(server, a);
+                });
             server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withSource(capture), command);
             return out;
         });
@@ -382,7 +401,9 @@ class Scenarios {
 
         // 1. load defaults
         check("default speed is 2×", get("storage full_ghast_ahead:config speed").equals("200"), get("storage full_ghast_ahead:config"));
-        check("presets written", get("storage full_ghast_ahead:presets list").contains("4×"), "");
+        // a narrow path: Paper cuts long /data get output short with "..."
+        check("presets written", get("storage full_ghast_ahead:presets list[{label:\"4×\"}].label").contains("4×"),
+            get("storage full_ghast_ahead:presets list[{label:\"4×\"}]"));
 
         // 2. nothing boosted while unridden
         check("unridden happy ghast stays vanilla", near(fs("t.a"), 0.05, 1e-9) && !boosted("t.a"), f(fs("t.a")));

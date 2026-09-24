@@ -57,6 +57,8 @@ Don't unzip the file.
 
 **As a mod:** the same pack also comes as a mod for Fabric, Quilt, NeoForge and Forge. Put `FullGhastAhead-1.0.0-fabric.jar` (Fabric or Quilt, needs Fabric API) or `FullGhastAhead-1.0.0-forge.jar` (Forge or NeoForge) in the `mods` folder. It then runs in every world. Use either the mod or the zip, not both.
 
+**As a server plugin:** the same pack also comes as a plugin for Paper, Purpur, Spigot and Bukkit. Put `FullGhastAhead-1.0.0-plugin.jar` in the `plugins` folder and restart the server. On Paper and Purpur the plugin loads the pack itself; on Spigot and Bukkit it copies the pack into `world/datapacks/` and reloads. Use either the plugin or the zip, not both.
+
 ## Compatibility
 
 - One zip supports Minecraft Java **26.2 and 26.3**.
@@ -76,6 +78,8 @@ Don't unzip the file.
 3. Run `/reload`, or reopen the world or restart the server.
 
 Installed as a mod? Run step 1, then remove the jar from the `mods` folder and restart the game or server.
+
+Installed as a plugin? Run step 1, then remove the jar from the `plugins` folder. On Spigot and Bukkit, also delete `world/datapacks/full_ghast_ahead.zip`. Restart the server.
 
 ## Support
 
