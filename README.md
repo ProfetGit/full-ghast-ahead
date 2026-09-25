@@ -9,11 +9,19 @@
 
 A vanilla data pack for **Minecraft Java 26.2 and 26.3**. A happy ghast flies **2× faster** while you steer it, and floats along at its usual pace again when you get off. It runs on the server only, and also comes as a mod (Fabric, Quilt, NeoForge, Forge) and a server plugin (Paper, Purpur, Spigot, Bukkit).
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/showcase/ghast_cruise.gif" alt="Riding a happy ghast at 2x speed" width="66.67%">
+</p>
+
 ![Why this pack?](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-why-this-pack.png)
 
 - **Vanilla happy ghasts are slow.** Steered, one does about 3.6 blocks per second, slower than you sprint. With the pack it does about 7.2, and up to 14.4 if you want.
 - **Only while you ride.** Happy ghasts that nobody rides behave exactly as in vanilla, and hostile ghasts are untouched.
 - **Still feels like vanilla.** The pack raises the ghast's own flying speed, so turning, climbing and slowing down feel the same, just faster.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/showcase/ghast_compare.gif" alt="The same flight twice: vanilla on the left, Full Ghast Ahead at 2x on the right" width="87.78%">
+</p>
 
 ![How to use](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-how-to-use.png)
 
