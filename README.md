@@ -44,8 +44,8 @@ Use only one of the three. To remove it cleanly, run `/function full_ghast_ahead
 
 <!-- promo:start -->
 <p align="center">
-<a href="https://modrinth.com/datapack/vanilla-timber"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/timber.gif" alt="Timber: One chop. Whole tree. Server side." width="49%"></a>
-<a href="https://modrinth.com/datapack/vanilla-veinminer"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/veinminer.gif" alt="Veinminer: One swing. Whole vein. Server side." width="49%"></a>
+<a href="https://www.curseforge.com/minecraft/mc-mods/profets-timber"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/timber.gif" alt="Timber: One chop. Whole tree. Server side." width="49%"></a>
+<a href="https://www.curseforge.com/minecraft/mc-mods/profets-veinminer"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/veinminer.gif" alt="Veinminer: One swing. Whole vein. Server side." width="49%"></a>
 <a href="https://www.curseforge.com/minecraft/mc-mods/tidy-pockets"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/tidy-pockets.gif" alt="Tidy Pockets: One click. All sorted. Client side." width="49%"></a>
 <a href="https://www.curseforge.com/minecraft/mc-mods/having-a-blast"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/having-a-blast.gif" alt="Having a Blast: One boom. Bouncy blocks. Client or server." width="49%"></a>
 </p>
