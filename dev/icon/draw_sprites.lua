@@ -1,7 +1,7 @@
 -- Full Ghast Ahead icon sprites. Run through the aseprite MCP: dofile("<abs>/FullGhastAhead/dev/icon/draw_sprites.lua")
 -- fx_spark (the lens twinkle) is copied from Veinminer's sprites (same author).
 dofile("/home/emppu/Projects/Minecraft Datapacks/.claude/skills/pack-icon-animation/assets/pixel_art.lua")
-local OUT = "/home/emppu/Projects/Minecraft Datapacks/FullGhastAhead/dev/icon/sprites/"
+local OUT = "/home/emppu/Projects/Minecraft Datapacks/packs/FullGhastAhead/dev/icon/sprites/"
 
 local body = { ["0"] = "#55557A", r = "#6E6E8A", s = "#8B8BA6", t = "#ABABC2", u = "#CACAD9", v = "#E2E2EC", w = "#F3F3F8", W = "#FFFFFF" }
 local blush = { ["4"] = "#B85B7E", ["3"] = "#E3829F", ["2"] = "#F9A9BF", ["1"] = "#FFD3DE" }

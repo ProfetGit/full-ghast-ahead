@@ -7,9 +7,9 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT.parent / "ModJar"))
+sys.path.insert(0, str(ROOT.parents[1] / "tools/ModJar"))
 import modjar  # noqa: E402  workspace tool, packs the zip as mod jars
-sys.path.insert(0, str(ROOT.parent / "PluginJar"))
+sys.path.insert(0, str(ROOT.parents[1] / "tools/PluginJar"))
 import pluginjar  # noqa: E402  workspace tool, packs the zip as a server plugin
 PACK = ROOT / "pack"
 DIST = ROOT / "dist"

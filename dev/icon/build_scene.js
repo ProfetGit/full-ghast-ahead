@@ -13,7 +13,7 @@
 // Screen space: the `screen` group is tilted to face the orthographic camera, so inside it x = right, y = up, z = toward camera.
 var FGA = (function () {
   const fs = require('fs');
-  const DIR = '/home/emppu/Projects/Minecraft Datapacks/FullGhastAhead/dev/icon/';
+  const DIR = '/home/emppu/Projects/Minecraft Datapacks/packs/FullGhastAhead/dev/icon/';
   const TEX = DIR + 'sprites/';
   const PROJECT = { uuid: '85825bb6-ef87-8c9f-36a7-ab0d0a301ff9', name: 'full_ghast_ahead_icon_anim' };
   const LOCK_OWNER = 'full-ghast-ahead';

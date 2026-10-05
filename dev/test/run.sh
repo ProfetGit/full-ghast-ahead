@@ -2,7 +2,7 @@
 # Usage: dev/test/run.sh <mc-version> [workdir] [harness args...]
 # Boots a headless server from the local ModrinthApp jar with the built pack and runs GhastTest.
 # PLATFORM=paper|purpur|spigot|bukkit runs the same scenarios on that plugin platform with the plugin jar
-# (../PluginJar/platform.py sets up the work dir; default work dir .work/<ver>-<platform>).
+# (../../tools/PluginJar/platform.py sets up the work dir; default work dir .work/<ver>-<platform>).
 set -euo pipefail
 
 VER=${1:?usage: run.sh <mc-version> [workdir] [args...]}
@@ -42,7 +42,7 @@ JOPTS=()
 if [ "$PLATFORM" = vanilla ]; then
   cp "$ZIP" "$WORK/world/datapacks/"
 else
-  { read -r RUN_CP; read -r PMAIN; read -r PACKS; } < <(python3 "$ROOT/../PluginJar/platform.py" "$PLATFORM" "$VER" "$WORK" "$ROOT")
+  { read -r RUN_CP; read -r PMAIN; read -r PACKS; } < <(python3 "$ROOT/../../tools/PluginJar/platform.py" "$PLATFORM" "$VER" "$WORK" "$ROOT")
   JOPTS=("-Dharness.main=$PMAIN" "-Dharness.packs=$PACKS")
 fi
 for extra in ${EXTRA_PACKS:-}; do cp -r "$extra" "$WORK/world/datapacks/"; done
@@ -65,6 +65,8 @@ EOF
 
 javac -nowarn -cp "$JAR:$CP" -d "$WORK/classes" "$ROOT/dev/test/GhastTest.java"
 cd "$WORK"
+# one machine-wide server slot (ModTest/slots.py), shared with every other session and harness
+if [ -f "$ROOT/../../tools/ModTest/slot.sh" ]; then . "$ROOT/../../tools/ModTest/slot.sh"; slot_acquire server "FullGhastAhead $VER${PLATFORM:+ $PLATFORM}"; fi
 set +e
 java -Xmx2G ${JAVA_OPTS:-} --add-opens java.base/java.lang=ALL-UNNAMED "${JOPTS[@]}" -cp "$WORK/classes:$RUN_CP" GhastTest "$@" 2>&1 | tee "$WORK/harness.log" | grep -oE '\[(PASS|FAIL|INFO|EXPLORE)\].*|SUMMARY.*|  - .*|[A-Za-z.]*Exception.*'
 STATUS=${PIPESTATUS[0]}
