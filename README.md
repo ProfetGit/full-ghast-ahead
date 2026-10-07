@@ -1,8 +1,8 @@
-![Full Ghast Ahead](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/banner.gif)
+![Full Ghast Ahead](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/banner.webp)
 
 <p align="center">
-<a href="https://github.com/ProfetGit"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/buttons/github.gif" alt="GitHub" width="23.96%"></a>
-<a href="https://ko-fi.com/profetgit"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/buttons/kofi.gif" alt="Ko-fi" width="23.96%"></a>
+<a href="https://github.com/ProfetGit"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/buttons/github.webp" alt="GitHub" width="23.96%"></a>
+<a href="https://ko-fi.com/profetgit"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/buttons/kofi.webp" alt="Ko-fi" width="23.96%"></a>
 </p>
 
 **Your happy ghast, twice as fast.**
@@ -10,29 +10,29 @@
 A vanilla data pack for **Minecraft Java 26.2 and 26.3**. A happy ghast flies **2× faster** while you steer it, and floats along at its usual pace again when you get off. It runs on the server only, and also comes as a mod (Fabric, Quilt, NeoForge, Forge) and a server plugin (Paper, Purpur, Spigot, Bukkit).
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/showcase/ghast_cruise.gif" alt="Riding a happy ghast at 2x speed" width="66.67%">
+<img src="https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/showcase/ghast_cruise.webp" alt="Riding a happy ghast at 2x speed" width="66.67%">
 </p>
 
-![Why this pack?](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-why-this-pack.png)
+![Why this pack?](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-why-this-pack.webp)
 
 - **Vanilla happy ghasts are slow.** Steered, one does about 3.6 blocks per second, slower than you sprint. With the pack it does about 7.2, and up to 14.4 if you want.
 - **Only while you ride.** Happy ghasts that nobody rides behave exactly as in vanilla, and hostile ghasts are untouched.
 - **Still feels like vanilla.** The pack raises the ghast's own flying speed, so turning, climbing and slowing down feel the same, just faster.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/showcase/ghast_compare.gif" alt="The same flight twice: vanilla on the left, Full Ghast Ahead at 2x on the right" width="87.78%">
+<img src="https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/showcase/ghast_compare.webp" alt="The same flight twice: vanilla on the left, Full Ghast Ahead at 2x on the right" width="87.78%">
 </p>
 
-![How to use](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-how-to-use.png)
+![How to use](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-how-to-use.webp)
 
 1. Put a harness on a happy ghast.
 2. Get on and fly. The player in the front seat steers and gets the speed.
 
-![Settings](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-settings.png)
+![Settings](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-settings.webp)
 
 Operators pick the speed with `/function full_ghast_ahead:settings`: 1×, 1.5×, **2×** (default), 2.5×, 3× or 4×. At 4× a ghast keeps up with the fastest horses.
 
-![Installation](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-installation.png)
+![Installation](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-installation.webp)
 
 - **Data pack:** put the `.zip` in your world's `datapacks` folder and run `/reload`. Don't unzip it.
 - **Mod:** put the `-fabric.jar` (Fabric or Quilt, needs Fabric API) or the `-forge.jar` (Forge or NeoForge) in `mods`.
@@ -40,28 +40,28 @@ Operators pick the speed with `/function full_ghast_ahead:settings`: 1×, 1.5×,
 
 Use only one of the three. To remove it cleanly, run `/function full_ghast_ahead:uninstall` first.
 
-![More from Profet](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-more-from-profet.png)
+![More from Profet](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-more-from-profet.webp)
 
 <!-- promo:start -->
 <p align="center">
-<a href="https://www.curseforge.com/minecraft/mc-mods/profets-timber"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/timber.gif" alt="Timber: One chop. Whole tree. Server side." width="49%"></a>
-<a href="https://www.curseforge.com/minecraft/mc-mods/profets-veinminer"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/veinminer.gif" alt="Veinminer: One swing. Whole vein. Server side." width="49%"></a>
-<a href="https://www.curseforge.com/minecraft/mc-mods/tidy-pockets"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/tidy-pockets.gif" alt="Tidy Pockets: One click. All sorted. Client side." width="49%"></a>
-<a href="https://www.curseforge.com/minecraft/mc-mods/having-a-blast"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/having-a-blast.gif" alt="Having a Blast: One boom. Bouncy blocks. Client or server." width="49%"></a>
+<a href="https://www.curseforge.com/minecraft/mc-mods/profets-timber"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/timber.webp" alt="Timber: One chop. Whole tree. Server side." width="49%"></a>
+<a href="https://www.curseforge.com/minecraft/mc-mods/profets-veinminer"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/veinminer.webp" alt="Veinminer: One swing. Whole vein. Server side." width="49%"></a>
+<a href="https://www.curseforge.com/minecraft/mc-mods/tidy-pockets"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/tidy-pockets.webp" alt="Tidy Pockets: One click. All sorted. Client side." width="49%"></a>
+<a href="https://www.curseforge.com/minecraft/mc-mods/having-a-blast"><img src="https://raw.githubusercontent.com/ProfetGit/assets/main/promo/having-a-blast.webp" alt="Having a Blast: One boom. Bouncy blocks. Client or server." width="49%"></a>
 </p>
 <!-- promo:end -->
 
-![Support](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-support.png)
+![Support](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-support.webp)
 
 Full Ghast Ahead is free. If it saves you some time, a coffee helps fund the next update.
 
-[![Support me on Ko-fi](https://raw.githubusercontent.com/ProfetGit/assets/main/kofi-banner.gif)](https://ko-fi.com/profetgit)
+[![Support me on Ko-fi](https://raw.githubusercontent.com/ProfetGit/assets/main/kofi-banner.webp)](https://ko-fi.com/profetgit)
 
 Want your own server to play on with friends? My BisectHosting affiliate link gives you 25% off the first month, and I get a small commission.
 
-[![Get 25% off your first month at BisectHosting](https://raw.githubusercontent.com/ProfetGit/assets/main/bisecthosting-banner.gif)](https://url-shortener.curseforge.com/Pp2BN)
+[![Get 25% off your first month at BisectHosting](https://raw.githubusercontent.com/ProfetGit/assets/main/bisecthosting-banner.webp)](https://url-shortener.curseforge.com/Pp2BN)
 
-![License](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-license.png)
+![License](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/title-license.webp)
 
 © 2026 Profet. All rights reserved.
 
@@ -70,4 +70,4 @@ Want your own server to play on with friends? My BisectHosting affiliate link gi
 
 Full terms: [LICENSE](https://github.com/ProfetGit/full-ghast-ahead/blob/main/LICENSE).
 
-![](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/divider.png)
+![](https://raw.githubusercontent.com/ProfetGit/full-ghast-ahead/main/docs/desc/divider.webp)
